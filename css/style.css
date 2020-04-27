@@ -1,0 +1,229 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #333333;
+}
+.header {
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.waves {
+    top: 70px;
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Animation */
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        top:120px;
+        width: 100%;
+        /*height: 40px;
+        min-height: 40px;*/
+    }
+  .colum-1{
+    bottom: 50px;
+    width: 200px;
+     height: 200px;
+        
+  }
+}
+.align-banner{
+    margin-top: 80px;
+}
+.frosted_glass {
+  
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    overflow: hidden;
+}
+.frosted_glass:before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(20px);
+    margin: -20px;
+}
+
+.navbar{
+background: transparent;
+
+}
+.nav-item:hover{
+  background-color: #5591f5;
+}
+ .btn-whatsapp {
+        display:block;
+        width:30px;
+        height:30px;
+        color:#fff;
+        position: fixed;
+        left:10px;
+        bottom:80px;
+        border-radius:50%;
+        line-height:80px;
+        text-align:center;
+        z-index:999;
+}
+}
+ .social-img:hover{
+-webkit-filter: drop-shadow(5px 5px 5px #222 );
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.social-img{
+width: 100px;
+
+}
+
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+.container-grid:hover{
+-webkit-box-shadow: 0px -2px 49px -6px rgba(0,0,0,0.65);
+-moz-box-shadow: 0px -2px 49px -6px rgba(0,0,0,0.65);
+box-shadow: 0px -2px 49px -6px rgba(0,0,0,0.65);
+}
+
+@media (max-width: 992px){ 
+
+    .flex {
+    /*Flexbox for containers*/
+   display: grid;
+   grid-template-columns: 2fr;
+}
+
+.column-dm{
+display:none;
+}
+}
+
+@media (max-width: 700px) { 
+
+.container-grid {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   width: 500px;
+}
+.container-grid p{
+
+font-size: 14px;
+margin: 2px;
+}
+.column-dm{
+display:none;
+}
+.hide {
+display:none;
+}
+.header {
+    height: 60vh;
+}
+.nosotros{
+    height: -40vh;
+}
+}
+
+@media (max-width: 464px) { 
+.hide .column-dm{
+display:none;
+}
+.container-grid {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  width: 350px;
+}
+
+}
+/*@media (max-height:640px){
+.container-grid {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 400px;
+  height:100px;
+  font-size: 12px;
+}
+}*/
+
+/*hoverable*/
